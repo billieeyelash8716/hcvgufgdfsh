@@ -5,11 +5,11 @@ server:
     context-path: /
 
 lavalink:
+  pluginsDir: "./plugins"
   plugins:
     - dependency: "dev.lavalink.youtube:youtube-source:1.0.0"
       repository: "https://maven.lavalink.dev/releases"
 
-lavalink:
   server:
     password: "innovatingthewaystolisten"
     playerUpdateInterval: 1
