@@ -13,4 +13,4 @@ COPY plugins/ plugins/
 EXPOSE 2333
 
 # Start Lavalink
-CMD ["java
+CMD ["java", "-Dlogback.configurationFile=logback.xml", "-jar", "Lavalink.jar"]
