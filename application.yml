@@ -4,10 +4,6 @@ server:
 
 lavalink:
   pluginsDir: "./plugins"
-  plugins:
-    - dependency: "dev.lavalink.youtube:youtube-plugin:1.0.4"
-      repository: "https://maven.lavalink.dev/releases"
-      snapshot: false
 
   server:
     password: "innovatingthewaystolisten"
