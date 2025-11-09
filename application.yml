@@ -1,8 +1,6 @@
 server:
   port: 2333
   address: 0.0.0.0
-  servlet:
-    context-path: /
 
 lavalink:
   pluginsDir: "./plugins"
@@ -13,18 +11,14 @@ lavalink:
 
   server:
     password: "innovatingthewaystolisten"
-    playerUpdateInterval: 1
-    statsTaskInterval: 2
-    trackStuckThresholdMs: 10000
-    useSeekGhosting: true
-    bufferDurationMs: 0
-    frameBufferDurationMs: 256
-    opusEncodingQuality: 8
-    resamplingQuality: HIGH
-    youtubePlaylistLoadLimit: 6
-    youtubeSearchEnabled: true
-    soundcloudSearchEnabled: true
-    gc-warnings: true
+    sources:
+      youtube: false  # Disable built-in YouTube source
+      bandcamp: true
+      soundcloud: true
+      twitch: true
+      vimeo: true
+      http: true
+      local: false
 
     filters:
       volume: true
@@ -38,46 +32,35 @@ lavalink:
       channelMix: true
       lowPass: true
 
-    sources:
-      youtube: false
-      bandcamp: true
-      soundcloud: true
-      twitch: true
-      vimeo: true
-      http: true
-      local: false
-      getyarn: true
-      odysee: true
-      reddit: true
-      rumble: true
-      tiktok: true
-      yandex: true
+    bufferDurationMs: 400
+    frameBufferDurationMs: 5000
+    opusEncodingQuality: 10
+    resamplingQuality: LOW
+    trackStuckThresholdMs: 10000
+    useSeekGhosting: true
+    youtubePlaylistLoadLimit: 6
+    playerUpdateInterval: 5
+    youtubeSearchEnabled: true
+    soundcloudSearchEnabled: true
+    gc-warnings: true
 
 metrics:
   prometheus:
     enabled: false
     endpoint: /metrics
 
-sentry:
-  dsn: ""
-  environment: ""
-
 logging:
   file:
     path: ./logs/
-
   level:
     root: INFO
     lavalink: INFO
-
   request:
     enabled: true
     includeClientInfo: true
-    includeHeaders: false
     includeQueryString: true
     includePayload: true
     maxPayloadLength: 10000
-
   logback:
     rollingpolicy:
       max-file-size: 1GB
