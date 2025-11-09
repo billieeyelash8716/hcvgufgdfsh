@@ -4,3 +4,5 @@ WORKDIR /opt/lavalink
 
 COPY application.yml .
 COPY plugins/ plugins/
+
+ENTRYPOINT ["/bin/bash", "-c", "java -Dlogback.configurationFile=logback.xml -jar Lavalink.jar"]
