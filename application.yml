@@ -2,6 +2,9 @@ server:
   port: 2333
   address: 0.0.0.0
 
+  http:
+    cors: "*"
+    
 lavalink:
   pluginsDir: "./plugins"
 
