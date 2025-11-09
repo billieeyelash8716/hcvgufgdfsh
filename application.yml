@@ -1,11 +1,13 @@
 server:
   port: 2333
   address: 0.0.0.0
+  servlet:
+    context-path: /
 
-plugins:
-#  name:
-#    some_key: some_value
-#    another_key: some_value
+lavalink:
+  plugins:
+    - dependency: "dev.lavalink.youtube:youtube-source:1.0.0"
+      repository: "https://maven.lavalink.dev/releases"
 
 lavalink:
   server:
