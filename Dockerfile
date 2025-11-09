@@ -12,6 +12,3 @@ COPY plugins/ plugins/
 
 # Expose Lavalink port
 EXPOSE 2333
-
-# Start Lavalink
-CMD ["java", "-jar", "Lavalink.jar"]
